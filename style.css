@@ -11,7 +11,7 @@ body{
   justify-content: center;
   display: flex;
   flex-direction: column;
-  background: url("imagens/may-riding-a-bike-pokemon-emerald.3840x2160.gif") no-repeat center/cover;
+  background: url("may-riding-a-bike-pokemon-emerald.3840x2160.gif") no-repeat center/cover;
   background-attachment: fixed;
     perspective: 10000px;
 }
