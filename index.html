@@ -1,37 +1,118 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu-Gi-Oh! Card Library - Exemplo</title>
+    
+    <style>
+        /* 1. ESTILO DO FUNDO (BODY) */
+        body {
+            background-image: linear-gradient(to bottom, #000000, #8b0000);
+            min-height: 100vh;
+            margin: 0;
+            color: #333; /* Cor do texto padrão para o conteúdo claro */
+            font-family: Arial, sans-serif;
+        }
 
-  <title>Venha competir na liga pokémon!</title>
-  <link rel="stylesheet" href="style.css" />
+        /* 2. ESTILO DO CONTAINER GERAL (Centraliza o conteúdo) */
+        .container {
+            width: 90%; /* Largura do conteúdo */
+            max-width: 900px; /* Limite máximo */
+            margin: 40px auto; /* Centraliza horizontalmente e dá espaço no topo/base */
+            padding: 20px;
+        }
+
+        /* 3. ESTILO DOS "FLASH-CARDS" (SEÇÕES) */
+        .card-section {
+            background-color: #f7f7f7; /* Fundo cinza bem claro para o card */
+            border-radius: 10px; /* Bordas arredondadas */
+            padding: 30px; /* Espaçamento interno */
+            margin-bottom: 25px; /* Espaçamento entre os cards */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+            color: #333; /* Texto escuro dentro do card claro */
+        }
+        
+        /* 4. ESTILOS DE DENTRO DO CARD (Para legibilidade) */
+        h1, h2 {
+            color: #cc0000; /* Vermelho escuro para os títulos */
+        }
+        
+        /* Estilo da Tabela para o "card" de resultado */
+        #card-details-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 15px;
+        }
+        #card-details-table th, #card-details-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        #card-details-table thead th {
+            background-color: #e0e0e0;
+            color: #000;
+        }
+        #card-details-table tbody td:first-child {
+            font-weight: bold;
+            width: 30%;
+            background-color: #f0f0f0;
+        }
+        #resultado{
+          display: none;
+        }
+    </style>
 </head>
-
 <body>
-<div class="cadastroPokemon">
-    </div>
 
-  <div class="cadastro-pokemon">
-    <form autocomplete="off">
-      <h2>cadastre-se</h2>
-      <div class="grupo-input">
-        <input type="text"  id="nome" required />
-        <label for="input" class="label">nome:</label>
-      </div>
-      <div class="grupo-input">
-        <input type="email"  id="input" required />
-        <label for="input" class="label">email:</label>
-      </div>
-      <div class="grupo-input">
-        <input type="password"  id="input" required />
-        <label for="input" class="label">senha:</label>
-      </div>
-    </form>
-  </div>
-  
-  
-</body>
+    <div class="container">
+        
+        <header class="card-section">
+            <h1>Biblioteca de Cards Yu-Gi-Oh!</h1>
+            <p>Busque as características de qualquer carta pelo seu nome.</p>
+        </header>
+
+        <section id="busca" class="card-section">
+            <h2>Busca de Cartas</h2>
+            <form id="card-search-form">
+                
+                <label for="card-name">Nome da Carta:</label>
+                <input type="text" id="card-name" name="card_name" value="Mago Negro" required>
+                
+                <button type="submit">Buscar Características</button>
+                
+            </form>
+        </section>
+
+        <section id="resultado" class="card-section">
+            <h2>Características da Carta: Mago Negro</h2>
+            
+            <div id="card-image-container">
+                <img src="https://images.ygoprodeck.com/images/cards/46986414.jpg" alt="Imagem do Mago Negro" style="width: 180px; display: block; margin: 15px 0;">
+            </div>
+
+            <table id="card-details-table">
+                <tr><td>Nome</td><td>Mago Negro (Dark Magician)</td></tr>
+                <tr><td>Tipo</td><td>Monstro Normal / Mago</td></tr>
+                <tr><td>Atributo/Elemento</td><td>TREVAS</td></tr>
+                <tr><td>Nível/Rank</td><td>7</td></tr>
+                <tr><td>ATK / DEF</td><td>2500 / 2100</td></tr>
+                <tr><td>Efeito/Descrição</td><td>O mago supremo em termos de ataque e defesa.</td></tr>
+                <tr><td>Raridade</td><td>Ultra Rara (Exemplo)</td></tr>
+            </table>
+            
+        </section>
+
+    </div> </body>
+    <script type="text/javascript" charset="utf-8">
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('card-search-form');
+    const resultadoSection = document.getElementById('resultado');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        resultadoSection.style.display = 'block'; 
+            });
+        });
+    </script>
 
 </html>
