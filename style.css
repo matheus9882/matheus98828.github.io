@@ -1,0 +1,153 @@
+ @import url('https://fonts.cdnfonts.com/css/pokemon-solid ');
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Poppins", sans-serif;
+}
+body{
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background: url("imagens/may-riding-a-bike-pokemon-emerald.3840x2160.gif") no-repeat center/cover;
+  background-attachment: fixed;
+    perspective: 10000px;
+}
+h1,h3{
+    font-family:'Pokemon Solid';
+    
+}
+.apresentacao{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 30px;
+    letter-spacing: 1.5px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+@media screen and (min-width: 768px) {
+.apresentacao h3{
+    font-size: 48px;
+    line-height: 60px;
+ }
+.apresentacao h1{
+    font-size: 78px;
+ }
+}
+
+.cadastro-pokemon{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    border-right: 15px;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+
+ }
+
+.cadastro-pokemon:hover, 
+.cadastro-pokemon:active, 
+.cadastro-pokemon:focus-within {
+    transform: scale(1.1) rotateY(15deg);
+    transform-origin: bottom;
+    box-shadow: -26px 26px 80px 4px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px) brightness(1.1)  saturate(1.1);
+}
+
+.cadastro-pokemon:hover h2, 
+.cadastro-pokemon:active h2, 
+.cadastro-pokemon:focus-within h2,
+.cadastro-pokemon:hover .label, 
+.cadastro-pokemon:active .label, 
+.cadastro-pokemon:focus-within .label {
+    text-shadow: -8px 10px 25px rgba(0, 0, 0, 0.8);
+}
+form h2{
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    transition: all 0.5s;
+}
+.grupo-input{
+    width: 320px;
+    margin: 35px auto 0 ;
+    position: relative;
+}
+.grupo-input input{
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 500%;
+    padding: 5px 0;
+    background: transparent;
+    border-bottom: 2px solid #fff;
+}
+.grupo-input .label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+.grupo-input input:focus ~.label,
+.grupo-input input:valid ~.label{
+    top: -20px;
+    font-size: 14px;
+    color: peachpuff;
+    transition: all 0.5s;
+    
+}
+input:focus{
+    border-bottom:2px solid peachpuff;
+    animation:bnt 3s infinite ;
+}
+ input:invalid{
+    border-bottom: 2px solid darkred;
+    
+}
+input:valid{
+    border-bottom:2px solid darkcyan;
+}
+
+@keyframes bnt{
+    0%{
+        border-color: black ;
+    }
+    50%{
+        border-color: white;
+    }
+    100%{
+        border-color: peachpuff;
+    }
+}
+.bnt{
+    display: block;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    margin:20px auto 0;
+    background: lightblue;
+    transition: all 0.3s;
+}
+.bnt:hover,
+.bnt:active{
+    transform: scale(1.2);
+    background: darkcyan;
+    box-shadow: -8px 16px 24px 5px rgba(0, 0, 0, 0.3);
+    
+}
