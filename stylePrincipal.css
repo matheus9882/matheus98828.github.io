@@ -18,7 +18,7 @@ html,body{
   display: flex;
   opacity: 1;
   position: relative;
-  background: url("/projeto-estudado/imagens/1000114709.jpg") no-repeat center;
+  background: url("imagens/1000114709.jpg") no-repeat center;
   background-size: cover;
   overflow: hidden;
 }
@@ -55,7 +55,7 @@ html,body{
   justify-content: center;
   align-items: center;
   z-index: 10;
-  background: url("/projeto-estudado/imagens/1767386055256.png") no-repeat center/cover;
+  background: url("imagens/1767386055256.png") no-repeat center/cover;
   background-size: 80vmax;
   
 }
@@ -82,7 +82,7 @@ html,body{
   width: 100vw;
   height: 100vh;
   flex-direction: column;
-  background: url("/projeto-estudado/imagens/a3706430-dd41-11f0-99c1-49859d72350c.png") no-repeat center/cover;
+  background: url("imagens/a3706430-dd41-11f0-99c1-49859d72350c.png") no-repeat center/cover;
   perspective: 10000px;
 }
 /* SVG para transição */
@@ -323,7 +323,7 @@ input{
   image-rendering: pixelated;
 }
 .equipePoke > div.ocupado {
-  background-image: url("/projeto-estudado/imagens/1767797036366.png");
+  background-image: url("imagens/1767797036366.png");
    border-color: #ff0000; 
 }
 
@@ -571,37 +571,4 @@ input{
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none; /* Deixa clicar no select mesmo com o badge na frente */
-}
-/* Container da Tooltip Personalizada */
-#pokemon-tooltip {
-    position: fixed;
-    display: none; /* Escondida por padrão */
-    background: rgba(13, 19, 51, 0.95); /* Cor do seu fundo */
-    color: white;
-    padding: 15px;
-    border: 2px solid #ffcb05; /* Amarelo Pokémon */
-    border-radius: 10px;
-    z-index: 9999;
-    pointer-events: none; /* O mouse ignora a caixa para não bugar o hover */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    min-width: 200px;
-    font-family: 'Poppins', sans-serif;
-}
-
-#pokemon-tooltip h3 {
-    margin: 0 0 10px 0;
-    color: #ffcb05;
-    border-bottom: 1px solid #fff;
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-#pokemon-tooltip p {
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-#pokemon-tooltip .tooltip-moves {
-    color: #6890F0; /* Cor de destaque para os ataques */
-    font-weight: bold;
 }

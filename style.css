@@ -92,20 +92,20 @@ h1,h3{
     transform-style: preserve-3d;
     perspective: 500px;
     perspective-origin: bottom;
-    background: url("/projeto-estudado/imagens/1000114039.png") center;
+    background: url("imagens/1000114039.png") center;
     transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .animacao-troca.modo-login {
     right: 50%;
     border-radius: 0px 150px 150px 0px;
-    background: url("/projeto-estudado/imagens/1000114114.png") center/cover;
+    background: url("imagens/1000114114.png") center/cover;
     animation: none; 
 }
 .container.modo-login .animacao-troca {
     right: 50%; 
     border-radius: 0px 150px 150px 0px;
-    background: url("/projeto-estudado/imagens/1000114114.png") center/cover;
+    background: url("imagens/1000114114.png") center/cover;
 }
 
 .card-umbreon{
@@ -418,7 +418,7 @@ input:valid{
     pointer-events: auto;
 }
 body:has(.container.modo-login) {
-  background: url("/projeto-estudado/imagens/liberty-garden-pokemon.3840x2160 (1).gif") no-repeat center/cover;
+  background: url("imagens/liberty-garden-pokemon.3840x2160.gif") no-repeat center/cover;
   background-attachment: fixed;
 }
 
