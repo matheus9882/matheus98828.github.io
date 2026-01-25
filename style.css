@@ -1,5 +1,5 @@
  @import url('https://fonts.cdnfonts.com/css/pokemon-solid ');
-* {
+*{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -11,10 +11,26 @@ body{
   justify-content: center;
   display: flex;
   flex-direction: column;
-  background: url("may-riding-a-bike-pokemon-emerald.3840x2160.gif") no-repeat center/cover;
+  background: url("imagens/may-riding-a-bike-pokemon-emerald.3840x2160.gif") no-repeat center/cover;
   background-attachment: fixed;
-    perspective: 10000px;
+    perspective: 1000px;
+    transition: background 1.5s ease-in-out;
 }
+.container{
+    overflow: visible;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    max-width: 1100px;
+    height:700px;
+    background:rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(30px);
+    justify-content: space-around;
+    align-items: center;
+    opacity: 1;
+}
+
 h1,h3{
     font-family:'Pokemon Solid';
     
@@ -39,21 +55,223 @@ h1,h3{
     font-size: 78px;
  }
 }
-
+.login{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border:10px solid rgba(255,255,255,0.1);
+    transition: all 0.5s;
+    backface-visibility: hidden;
+    
+}
 .cadastro-pokemon{
     width: 400px;
     height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(30px);
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
-    border-right: 15px;
+    border:10px solid rgba(255,255,255,0.1);
+    border-radius: 15px ;
     transition: all 0.5s;
     backface-visibility: hidden;
 
  }
+.animacao-troca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0%;
+    width:50%;
+    height:700px;
+    z-index: 92;
+    border-radius:150px 0px 0px 150px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    perspective-origin: bottom;
+    background: url("/projeto-estudado/imagens/1000114039.png") center;
+    transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+.animacao-troca.modo-login {
+    right: 50%;
+    border-radius: 0px 150px 150px 0px;
+    background: url("/projeto-estudado/imagens/1000114114.png") center/cover;
+    animation: none; 
+}
+.container.modo-login .animacao-troca {
+    right: 50%; 
+    border-radius: 0px 150px 150px 0px;
+    background: url("/projeto-estudado/imagens/1000114114.png") center/cover;
+}
+
+.card-umbreon{
+    backface-visibility: visible; 
+    position: relative;
+    transform-style: preserve-3d ;
+    transition: all 0.6s;
+    width: 374px;
+    height: 512px;
+}
+.sprite-dark{
+    display: flex;
+   position: absolute;
+   transition: all 0.5s;
+   transform: translateZ(-1px);
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+   height: 50%;
+   top: 30%;
+   left: 25%;
+}
+
+.balaoFala-dark{
+    width: 180px;
+    height: 160px;
+    top: -20%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid black;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 20px;
+    pointer-events: auto;
+    transition: all 0.5 ease;
+    transform:translateX(65%) 
+    translateZ(20px) ;
+    opacity:0;
+    background: rgba(211, 167, 183, 1)
+}
+
+.sprite-dark img{
+    width: 250px;
+    height: 250px;
+}
+.umbreon{
+    position: absolute;
+    transition: all 0.5s;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    
+}
+.balaoFala-dark::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+    
+.card-umbreon:hover .balaoFala-dark {
+    opacity: 1;
+    
+}
+
+.card-umbreon:hover,
+.card-umbreon:active{
+    transform: scale(1.05) translate3d(0px, -20px, 50px)
+     rotate3d(1,0,0,10deg);
+     
+    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.4);
+    border: 4px solid black;
+}
+.card-umbreon:hover .sprite-dark ,
+.card-umbreon:active .sprite-dark {
+    
+    transform: translateZ(55px) rotate3d(-1,0,0, 14deg);
+    
+    filter: drop-shadow(10px 30px 40px rgba(0 , 0, 0, 0.6));
+}
+
+.card-pikachu{
+    backface-visibility: visible; 
+    position: relative;
+    transform-style: preserve-3d ;
+    transition: all 0.6s;
+    width: 374px;
+    height: 512px;
+}
+
+.sprite{
+   display: flex;
+   position: absolute;
+   transition: all 0.5s;
+   transform: translateZ(-1px);
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+   height: 50%;
+   top: 30%;
+   left: 25%;
+}
+
+.balaoFala{
+    width: 180px;
+    height: 160px;
+    top: -20%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid black;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 20px;
+    pointer-events: auto;
+    transition: all 0.5 ease;
+    transform:translateX(65%) 
+    translateZ(20px) ;
+    opacity:0;
+    background: rgba(211, 167, 183, 1)
+}
+.sprite img{
+    width: 250px;
+    height: 250px;
+}
+.pikachu{
+    position: absolute;
+    transition: all 0.5s;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    
+}
+.balaoFala::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.card-pikachu:hover .balaoFala {
+    opacity: 1;
+    
+}
+
+.card-pikachu:hover,
+.card-pikachu:active{
+    transform: scale(1.05) translate3d(0px, -20px, 50px)
+     rotate3d(1,0,0,10deg);
+     
+    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.4);
+    border: 4px solid black;
+}
+.card-pikachu:hover .sprite ,
+.card-pikachu:active .sprite {
+    
+    transform: translateZ(55px) rotate3d(-1,0,0, 14deg);
+    
+    filter: drop-shadow(10px 30px 40px rgba(0 , 0, 0, 0.6));
+}
+
 
 .cadastro-pokemon:hover, 
 .cadastro-pokemon:active, 
@@ -61,7 +279,7 @@ h1,h3{
     transform: scale(1.1) rotateY(15deg);
     transform-origin: bottom;
     box-shadow: -26px 26px 80px 4px rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(15px) brightness(1.1)  saturate(1.1);
+    backdrop-filter:  brightness(1.1)  saturate(1.1);
 }
 
 .cadastro-pokemon:hover h2, 
@@ -70,6 +288,22 @@ h1,h3{
 .cadastro-pokemon:hover .label, 
 .cadastro-pokemon:active .label, 
 .cadastro-pokemon:focus-within .label {
+    text-shadow: -8px 10px 25px rgba(0, 0, 0, 0.8);
+}
+.login:hover, 
+.login:active, 
+.login:focus-within {
+    transform: scale(1.1) rotateY(15deg);
+    transform-origin: bottom;
+    box-shadow: -26px 26px 80px 4px rgba(0, 0, 0, 0.8);
+    backdrop-filter:  brightness(1.1)  saturate(1.1);
+}
+.login:hover h2, 
+.login:active h2, 
+.login:focus-within h2,
+.login:hover .label, 
+.login:active .label, 
+.login:focus-within .label {
     text-shadow: -8px 10px 25px rgba(0, 0, 0, 0.8);
 }
 form h2{
@@ -135,7 +369,7 @@ input:valid{
         border-color: peachpuff;
     }
 }
-.bnt{
+.bnt, .bnt-Login{
     display: block;
     height: 50px;
     width: 200px;
@@ -145,9 +379,59 @@ input:valid{
     transition: all 0.3s;
 }
 .bnt:hover,
-.bnt:active{
+.bnt:active,
+.bnt-Login:hover,
+.bnt-Login:active{
     transform: scale(1.2);
     background: darkcyan;
     box-shadow: -8px 16px 24px 5px rgba(0, 0, 0, 0.3);
     
+    
 }
+
+.card-pikachu, .card-umbreon {
+    position: absolute;
+    transition: opacity 1,5s ease-in-out, transform 0.6s; 
+}
+
+
+.card-umbreon {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; 
+}
+
+.card-pikachu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container.modo-login .card-pikachu {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.container.modo-login .card-umbreon {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+body:has(.container.modo-login) {
+  background: url("/projeto-estudado/imagens/liberty-garden-pokemon.3840x2160 (1).gif") no-repeat center/cover;
+  background-attachment: fixed;
+}
+
+body:has(.container.modo-login) h1 {
+    color: yellow;
+    opacity: 0.8;
+    text-shadow: 0 -18px 10px gold;
+}
+body:has(.container) h1 {
+    color: lightseagreen;
+    opacity: 0.8;
+    text-shadow: 0 -18px 10px gold;
+    
+}
+
+        

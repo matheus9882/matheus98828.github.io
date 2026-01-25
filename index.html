@@ -11,35 +11,87 @@
 
   <body>
     <div class="apresentacao">
-    <h3>venha fazer batalhas pokémons na</h3>
-    <h1>Liga Pokémon!</h1>
-  </div>
-
-   <div class="cadastro-pokemon">
-    <form autocomplete="off">
-      <h2>Cadastre-se</h2>
-      <div class="grupo-input">
-        <input type="text"  id="nome" required />
-        <label for="input" class="label">nome:</label>
+      <h3>venha fazer batalhas pokémons na</h3>
+      <h1>Liga Pokémon!</h1>
+    </div>
+    <div class="container">
+      <div class="cadastro-pokemon">
+        <form class="cadastroForm" autocomplete="off">
+          <h2>Cadastre-se</h2>
+          <div class="grupo-input">
+            <input type="text"  id="nome" required />
+            <label for="nome" class="label">nome:</label>
+          </div>
+          <div class="grupo-input">
+            <input type="email"  id="email" required />
+            <label for="email" class="label">email:</label>
+          </div>
+          <div class="grupo-input">
+            <input type="password"  id="password" required />
+            <label for="password" class="label">senha:</label>
+          </div>
+          <br /><br /><br>
+          <hr>
+          <button class="bnt" type="submit">
+            <span>Cadastre-se!</span>
+          </button>
+        </form>
       </div>
-      <div class="grupo-input">
-        <input type="email"  id="input" required />
-        <label for="input" class="label">email:</label>
+      <div class="login">
+        <form class="loginform" autocomplete="off">
+          <h2>Bem Vindo de volta!</h2>
+          <div class="grupo-input">
+            <input type="text"  id="nomeLogin" required />
+            <label for="nomeLogin" class="label">nome:</label>
+          </div>
+          <div class="grupo-input">
+            <input type="email"  id="
+            emailLogin" required />
+            <label for="emailLogin" class="label">email:</label>
+          </div>
+          <div class="grupo-input">
+            <input type="password"  id="passwordLogin" required />
+            <label for="passwordLogin" class="label">senha:</label>
+            <br /><br /><br>
+          <hr>
+          <button class="bnt-Login" type="submit">
+            <span>Faça login!</span>
+          </button>
+          </div>
+        </form>
       </div>
-      <div class="grupo-input">
-        <input type="password"  id="input" required />
-        <label for="input" class="label">senha:</label>
-      </div>
-      <br /><br /><br>
-      <hr>
-      <button class="bnt" type="submit">
-        <span>cadastre-se!</span>
-      </button>
       
-    </form>
-  </div>
-  
-  
+      <div class="animacao-troca">
+        
+
+        <div class="card-pikachu">
+          <img class="pikachu" src="/projeto-estudado/imagens/1000114040.png" alt="" />
+          <div class="sprite">
+            <div class="balaoFala">
+              ja tem uma conta? <br />
+              <strong>clique aqui para logar!</strong>
+            </div>
+            <img  src="https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif" alt="Pikachu">
+          </div>
+        </div>
+        
+        <div class="card-umbreon">
+          <img class="umbreon" src="/projeto-estudado/imagens/1000114113.png" alt="" />
+          <div class="sprite-dark">
+            <div class="balaoFala-dark">
+              caso seja novo,  <br />
+              <strong>clique aqui para criar uma nova conta!</strong>
+            </div>
+            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/umbreon.gif" alt="Umbreon">
+          </div>
+         </div>
+        </div>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+      <script src="/projeto-estudado/JavaScript.js"></script>
 </body>
 
 </html>

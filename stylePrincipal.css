@@ -1,0 +1,607 @@
+@import url('fonts.googleapis.com');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0D1333;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  opacity: 1;
+  position: relative;
+  background: url("/projeto-estudado/imagens/1000114709.jpg") no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+.content{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 3%;
+  padding-top: 5%;
+  text-align: left;
+}
+.content h1{
+  font-size: 10vh;
+  line-height: 75%;
+}
+.content h1,.content p{
+  filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.7));
+  font-family: 'Poppins', sans-serif;
+  opacity: 1;
+}
+.content p{
+  font-size: 4vh;
+  font-family: 'Poppins', sans-serif;
+}
+.mascara {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background: url("/projeto-estudado/imagens/1767386055256.png") no-repeat center/cover;
+  background-size: 80vmax;
+  
+}
+#smooth-wrapper{
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#smooth-content{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+.AreaPoke{
+  display: flex;
+  align-items: center;
+  justify-content: top;
+  position: absolute;
+  transform: translateY (100px) ;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  background: url("/projeto-estudado/imagens/a3706430-dd41-11f0-99c1-49859d72350c.png") no-repeat center/cover;
+  perspective: 10000px;
+}
+/* SVG para transição */
+
+.custom-shape-divider-bottom-1767561287 { 
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    overflow: hidden; 
+    line-height: 0; 
+    transform: rotate(180deg) translateY(95%); 
+} 
+
+.custom-shape-divider-bottom-1767561287 svg { 
+    position: relative; 
+    display: block; 
+    width: calc(150% + 1.3px); 
+    height: 165px; 
+    transform: rotateY(180deg); 
+} 
+
+.custom-shape-divider-bottom-1767561287 .shape-fill { 
+    fill: #0D1333; 
+}
+.registroPoke{
+  overflow: hidden;
+  width: 90%;
+  height: 55%;
+  margin-top: 10%;
+  transform: translateY(-60px);
+  opacity: 1;
+  background-color: rgba(29, 123, 225, 0.2); 
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  transform-origin: center center;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.registroPoke:hover, .registroPoke:active{
+  transform: scale(1.03) translate3d(0px, -10px, 20px) !important;
+  box-shadow: 0px 30px 15px  rgba(0,0,0,0.3) !important;
+}
+/*Area para o registro dos pokémons*/
+.PaiFlexBox{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+}
+.grupo-input{
+  display: flex;
+  flex-direction: column ;
+  flex: 2;
+  gap: 5px;
+}
+.InputLabel{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.InputLabel input{
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 5px;
+}
+.InputLabel label{
+  position: absolute;
+  left: 5px;
+  top: 15px;
+  color: #ccc;
+  pointer-events: none;
+  transition: all 0.5s;
+  font-size: 20px;
+}
+.InputLabel input:focus ~label,
+.InputLabel input:valid ~label{
+    top: -20px;
+    font-size: 14px;
+    color: peachpuff;
+    transition: all 0.5s;
+}
+
+.cardVisu{
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  min-height: 625px;
+  border: solid 4px black;
+  background-color:#3A0C61;
+  image-rendering: pixelated;
+  padding: 20px;
+}
+input{
+  scroll-margin-top: 100vh; 
+}
+
+#SpritePoke {
+  width: 300px;
+  height: auto;
+  
+  image-rendering: pixelated; 
+  image-rendering: crisp-edges;
+  
+  margin-bottom: 20px;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5)); 
+}
+.tipoPoke{
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+.tipoPoke p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 2px 2px 0px #000;
+  margin: 0;
+}
+.registrar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+#RegistradoBNT{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #7B43B2;
+  transition: all 0.3s linear;
+}
+#RegistradoBNT:hover,
+#RegistradoBNT:active{
+  background-color: #1D7BE1;
+  transform: scale(1.2);
+  box-shadow: 12px 20px 15px rgba(0, 0, 0, 0.7);
+}
+/*estilos gerais para cada tipo pokémon.*/
+.box-tipo {
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+.box-tipo p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  margin: 0;
+}
+
+/* estilos Individuais por Tipo */
+.normal { 
+  background-color: #A8A878; 
+  
+}
+.fire { background-color: #F08030; }
+.water { background-color: #6890F0; }
+.grass { background-color: #78C850; }
+.electric { background-color: #F8D030; }
+.ice { background-color: #98D8D8; }
+.fighting { background-color: #C03028; }
+.poison { background-color: #A040A0; }
+.ground { background-color: #E0C068; }
+.flying { background-color: #A890F0; }
+.psychic { background-color: #F85888; }
+.bug { background-color: #A8B820; }
+.rock { background-color: #B8A038; }
+.ghost { background-color: #705898; }
+.dragon { background-color: #7038F8; }
+.dark { background-color: #705848; }
+.steel { background-color: #B8B8D0; }
+.fairy { background-color: #EE99AC; }
+/* estilos para mostrar a equipe pokémon do usuário */
+/* Container que segura os 6 slots */
+.equipePoke {
+  display: flex;
+  will-change: width, opacity, transform;
+  overflow: hidden;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 1;
+  transform: translateY(100px);
+  width: 95%; 
+  height: 12vh;
+  margin-top: 30px; 
+  background-color: rgba(29, 123, 225, 0.2); 
+  border-radius: 50px; 
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+.equipePoke > div {
+  width: 100px;
+  height: 100px;
+  background-color: #333;
+  background-image: url("/projeto-estudado/imagens/1767796984509.png"); 
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%; 
+  border: 3px solid #000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+}
+
+.equipePoke > div:hover {
+  transform: scale(1.1) translateY(-5px);
+  border-color: #1D7BE1;
+}
+
+.equipePoke img {
+  width: 90%;
+  height: auto;
+  image-rendering: pixelated;
+}
+.equipePoke > div.ocupado {
+  background-image: url("/projeto-estudado/imagens/1767797036366.png");
+   border-color: #ff0000; 
+}
+
+/*parte para registrar as equipes*/
+.Registrar-Equipe{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 200vh;
+  width: 100vw;
+  height: 50vh;
+  background-color: darkcyan;
+}
+.containerRegister{
+  width: 90%;
+  height: 80%;
+  border-radius: 50px;
+  background-color: rgba(66, 68, 90, 1);
+}
+.Head{
+  width: 100%;
+  height: 300px; 
+  border-radius: 50px 50px 0px 0px;
+  border-bottom: solid 3px black;
+  background-color: #d3d3d3;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: yellow; 
+  z-index: 100;
+}
+.alinhamento{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Head > p{
+  font-size: 5vw;
+}
+.botao-customizado {
+  display: inline-block;
+  width: 320px;
+  height: 70px;
+  background-color: lightblue;
+  color: black;
+  padding-top: 17px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 50px;
+}
+
+.botao-customizado:hover {
+  background-color: darkseagreen;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+#inputCSV {
+    display: none;
+}
+
+.botao{
+  width: 320px;
+  height: 70px;
+  border-radius: 50px;
+  background-color: lightblue;
+  transition: all ease-in 600ms;
+  font-size: 30px;
+  text-align: center;
+}
+.botao:hover {
+  transform: scale(1.05) ;
+  box-shadow: 12px 20px 15px rgba(0, 0, 0, 0.7);
+  background-color: darkseagreen;
+}
+/* Área que irá servir para mostrar as equipes*/
+.Jogadores{
+  display: flex;
+  flex-direction: column ;
+  gap: 4px;
+}
+.card-treinador{
+  background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);  
+    border: 2px solid #ffcb05;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 15px 0;
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+.card-treinador h3 {
+    margin-top: 0;
+    color: #ffcb05;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.fotos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 10px;
+}
+.mini-sprite {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+    transition: transform 0.2s;
+}
+
+.mini-sprite:hover {
+    transform: scale(1.3); 
+}
+/*isso aqui irá dar estilização para o botão de excluir de dentro da lista de jogadores */
+.btn-excluir,.btn-editar{
+  width: 220px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: lightblue;
+  transition: all ease-in 600ms;
+  font-size: 30px;
+}
+.btn-excluir,.btn-editar:hover,
+.btn-excluir,.btn-editar:active{
+  transform: scale(1.05) ;
+  box-shadow: 12px 20px 15px rgba(0, 0, 0, 0.7);
+  background-color: darkseagreen;
+}
+/* Container dos selos de tipo */
+.type-badge {
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Estilo geral do selo (Badge) */
+.badge {
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 11px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+}
+
+/* Tabela de Cores por Tipo */
+.normal   { background-color: #A8A878; }
+.fire     { background-color: #F08030; }
+.water    { background-color: #6890F0; }
+.grass    { background-color: #78C850; }
+.electric { background-color: #F8D030; }
+.ice      { background-color: #98D8D8; }
+.fighting { background-color: #C03028; }
+.poison   { background-color: #A040A0; }
+.ground   { background-color: #E0C068; }
+.flying   { background-color: #A890F0; }
+.psychic  { background-color: #F85888; }
+.bug      { background-color: #A8B820; }
+.rock     { background-color: #B8A038; }
+.ghost    { background-color: #705898; }
+.dragon   { background-color: #7038F8; }
+.dark     { background-color: #705848; }
+.steel    { background-color: #B8B8D0; }
+.fairy    { background-color: #EE99AC; }
+/* 1. Padronização Geral dos Selects (Natureza e Ataques) */
+#PokeNature, .move-select,.ability-select {
+    width: 100%;
+    padding: 20px 5px;
+    background-color: rgba(255, 255, 255, 0.05); 
+    border: none;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none; 
+    -webkit-appearance: none;
+    outline: none;
+}
+.Ataques {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  width: 100%;
+  margin-top: 20px;
+}
+.ataque-box {
+  width: 100%;
+  position: relative;
+}
+.move-select {
+  margin-bottom: 0 !important; 
+}
+
+.move-select{
+  height: 100px;
+  border-radius: 50px;
+  font-size: 24px;
+  text-align: center;
+}
+/* 2. Efeito ao focar ou passar o mouse */
+#PokeNature:focus, .move-select:focus,
+#PokeNature:hover, .move-select:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-bottom-color: #ffcb05; /* Amarelo Pokémon para destaque */
+}
+
+/* 3. Estilização das Opções (o que aparece dentro do menu) */
+#PokeNature option, .move-select option {
+    background-color: #1a1a1a; /* Fundo escuro para leitura */
+    color: #fff;
+    padding: 10px;
+}
+
+/* 4. Ajuste específico para a caixa de ataques para dar "respiro" */
+.ataque-box {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 5. Ajuste dos Selos (Badges) de Tipo para não esmagarem o texto */
+.type-badge {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Deixa clicar no select mesmo com o badge na frente */
+}
+/* Container da Tooltip Personalizada */
+#pokemon-tooltip {
+    position: fixed;
+    display: none; /* Escondida por padrão */
+    background: rgba(13, 19, 51, 0.95); /* Cor do seu fundo */
+    color: white;
+    padding: 15px;
+    border: 2px solid #ffcb05; /* Amarelo Pokémon */
+    border-radius: 10px;
+    z-index: 9999;
+    pointer-events: none; /* O mouse ignora a caixa para não bugar o hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    min-width: 200px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#pokemon-tooltip h3 {
+    margin: 0 0 10px 0;
+    color: #ffcb05;
+    border-bottom: 1px solid #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#pokemon-tooltip p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+#pokemon-tooltip .tooltip-moves {
+    color: #6890F0; /* Cor de destaque para os ataques */
+    font-weight: bold;
+}
