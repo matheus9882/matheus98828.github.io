@@ -485,7 +485,6 @@ listaJogadores.addEventListener('click', (e) => {
 
     }
 });
-// --- COLE AQUI A FUNÇÃO DE TRANSFERÊNCIA ---
     function transferirParaBusca(nomePokemon) {
         if (!nomePokemon) return;
         const inputBusca = document.getElementById('PokeName'); 
@@ -495,7 +494,6 @@ listaJogadores.addEventListener('click', (e) => {
         }
     }
 
-    // --- COLE AQUI O OUVINTE DE CLIQUE NOS SLOTS ---
     const slotsEquipe = document.querySelectorAll('.equipePoke > div');
 slotsEquipe.forEach(slot => {
     slot.style.cursor = "pointer"; 
